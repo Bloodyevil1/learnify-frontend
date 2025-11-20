@@ -1,0 +1,28 @@
+.scroll-top-btn {
+  position: fixed;
+  bottom: 35px;
+  right: 35px;
+  background-color: #00d8ff;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  height: 48px;
+  width: 48px;
+  font-size: 1.5rem;
+  line-height: 1;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: background 0.3s, transform 0.2s;
+  z-index: 1000;
+}
+
+.scroll-top-btn:hover {
+  background-color: #009ec0;
+  transform: translateY(-3px);
+}
+
+/* Dark Theme */
+[data-theme="dark"] .scroll-top-btn {
+  background-color: #00b0d8;
+  box-shadow: 0 4px 10px rgba(255, 255, 255, 0.05);
+}

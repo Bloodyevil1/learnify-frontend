@@ -1,0 +1,48 @@
+/* 🎨 Global Styles - Learnify */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: #f7f8fa;
+  color: #222;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+[data-theme="dark"] {
+  background-color: #1e1e1e;
+  color: #f0f0f0;
+}
+
+[data-theme="dark"] .navbar {
+  background: #000;
+  color: #f0f0f0;
+}
+
+.theme-btn {
+  background: transparent;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+/* Responsive utilities */
+@media (max-width: 768px) {
+  .container {
+    width: 95%;
+  }
+}

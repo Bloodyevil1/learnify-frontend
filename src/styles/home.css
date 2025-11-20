@@ -1,0 +1,121 @@
+/* =====================================
+   Learnify – Home / Hero Section
+   ===================================== */
+
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 80px 0;
+  min-height: 80vh;
+}
+
+.hero-content {
+  flex: 1;
+  padding-right: 40px;
+}
+
+.hero-content h1 {
+  font-size: 2.8rem;
+  margin-bottom: 15px;
+  font-weight: 700;
+  line-height: 1.2;
+  color: #222;
+}
+
+.hero-content span {
+  color: #00d8ff;
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  margin-bottom: 25px;
+  color: #555;
+  max-width: 480px;
+}
+
+/* ---------- Explore Button ---------- */
+.hero-content .explore-btn {
+  padding: 12px 24px;
+  background-color: #00d8ff;
+  color: #fff;
+  font-weight: 600;
+  font-size: 1rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s, box-shadow 0.2s;
+}
+
+.hero-content .explore-btn:hover {
+  background-color: #009ec0;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 216, 255, 0.25);
+}
+
+.hero-image {
+  flex: 1;
+  text-align: center;
+}
+
+.hero-image img {
+  max-width: 90%;
+  /* border-radius: 12px; */
+  /* box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08); */
+  /* transition: transform 0.4s ease; */
+}
+
+
+
+/* ---------- Responsive ---------- */
+@media (max-width: 900px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+    padding: 60px 0;
+  }
+
+  .hero-content {
+    padding-right: 0;
+  }
+
+  .hero-content p {
+    margin: 0 auto 20px;
+  }
+
+  .hero-image {
+    margin-top: 30px;
+  }
+
+  .hero-image img {
+    max-width: 100%;
+  }
+}
+
+/* ---------- Accessibility & Motion Pref ---------- */
+@media (prefers-reduced-motion: reduce) {
+  .hero-image img {
+    transition: none;
+  }
+  .hero-content .explore-btn {
+    transition: background 0.3s;
+  }
+}
+
+/* ---------- Dark Theme Support ---------- */
+[data-theme="dark"] .hero-content h1,
+[data-theme="dark"] .hero-content p {
+  color: #f0f0f0;
+}
+
+[data-theme="dark"] .hero-content .explore-btn {
+  background-color: #00b0d8;
+}
+
+[data-theme="dark"] .hero-content .explore-btn:hover {
+  background-color: #0090b6;
+}
+
+/* [data-theme="dark"] .hero-image img {
+  box-shadow: 0 6px 20px rgba(255, 255, 255, 0.05);
+} */
