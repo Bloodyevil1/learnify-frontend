@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import toast from "react-hot-toast";
+import { Link } from "react-router-dom";  // ✅ smooth internal routing
 import "../styles/login.css";
 
 function Login() {
@@ -78,7 +79,13 @@ function Login() {
         </motion.button>
 
         <p className="note">
-          Don’t have an account? <a href="#">Sign up</a>
+          Don’t have an account?{" "}
+          <Link
+            to="/signup"
+            style={{ color: "#0072ff", fontWeight: "bold" }}
+          >
+            Sign Up
+          </Link>
         </p>
       </motion.form>
     </motion.div>

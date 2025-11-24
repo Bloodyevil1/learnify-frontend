@@ -9,8 +9,8 @@ import node from "../assets/node.png";
 function Dashboard() {
   // Simulated "logged‑in" user data
   const [user] = useState({
-    name: "Sandy Learner",
-    email: "sandy@example.com",
+    name: "User Learner",
+    email: "User@example.com",
   });
 
   // Example enrolled courses

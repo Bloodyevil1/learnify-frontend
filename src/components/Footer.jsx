@@ -1,6 +1,7 @@
 import React from "react";
+import { Link } from "react-router-dom";       // 👈 import Link for SPA navigation
 import "../styles/footer.css";
-import api from "../assets/api.png"; // replace with your actual logo image
+import api from "../assets/api.png";           // local logo/image
 
 function Footer() {
   return (
@@ -19,17 +20,25 @@ function Footer() {
         <div className="footer-links">
           <h4>Quick Links</h4>
           <ul>
-            <li><a href="/">Home</a></li>
-            <li><a href="/courses">Courses</a></li>
-            <li><a href="/login">Login</a></li>
-            <li><a href="/dashboard">Dashboard</a></li>
+            {/* ✅ use Link instead of <a> for internal routes */}
+            <li><Link to="/">Home</Link></li>
+            <li><Link to="/courses">Courses</Link></li>
+            <li><Link to="/login">Login</Link></li>
+            <li><Link to="/dashboard">Dashboard</Link></li>
           </ul>
 
           <h4>Follow Us</h4>
           <div className="social-icons">
-            <a href="#"><i className="fab fa-facebook"></i></a>
-            <a href="#"><i className="fab fa-twitter"></i></a>
-            <a href="#"><i className="fab fa-linkedin"></i></a>
+            {/* External links remain normal anchors */}
+            <a href="https://facebook.com/learnify" target="_blank" rel="noreferrer">
+              <i className="fab fa-facebook"></i>
+            </a>
+            <a href="https://twitter.com/learnify" target="_blank" rel="noreferrer">
+              <i className="fab fa-twitter"></i>
+            </a>
+            <a href="https://linkedin.com/learnify" target="_blank" rel="noreferrer">
+              <i className="fab fa-linkedin"></i>
+            </a>
           </div>
         </div>
       </div>

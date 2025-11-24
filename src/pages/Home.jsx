@@ -1,9 +1,12 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { useNavigate } from "react-router-dom"; // ✅ for internal navigation
 import "../styles/home.css";
 import heroImage from "../assets/heroImg.png";
 
 function Home() {
+  const navigate = useNavigate(); // ✅ initialize navigation
+
   return (
     <motion.div
       className="home"
@@ -34,7 +37,8 @@ function Home() {
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             transition={{ type: "spring", stiffness: 300 }}
-            onClick={() => (window.location.href = "/courses")}
+            // ✅ navigate works with basename="/learnify-frontend" automatically
+            onClick={() => navigate("/courses")}
           >
             Explore Courses
           </motion.button>
